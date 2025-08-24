@@ -1,3 +1,4 @@
+
 package project.model;
 
 import lombok.AllArgsConstructor;
@@ -12,4 +13,3 @@ import lombok.Setter;
 public class DataResponse {
     private boolean success;
 }
-
