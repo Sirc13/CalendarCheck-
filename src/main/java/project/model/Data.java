@@ -1,5 +1,6 @@
 package project.model;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -19,6 +20,8 @@ public class Data {
    @Id
    @GeneratedValue(strategy = GenerationType.IDENTITY)
    private Long id;
+   @Schema(name = "data", example = "5.03.2025", requiredMode = Schema.RequiredMode.REQUIRED)
    private String data;
+   @Schema(name = "answer", example = "true", requiredMode = Schema.RequiredMode.REQUIRED)
    private boolean answer;
 }
