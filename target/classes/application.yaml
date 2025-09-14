@@ -1,0 +1,11 @@
+server:
+  port: 8200
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: 992
+  liquibase:
+    change-log: classpath:liquibase/db.changelog.yml
+    enabled: true
