@@ -20,7 +20,7 @@ public class Data {
    @Id
    @GeneratedValue(strategy = GenerationType.IDENTITY)
    private Long id;
-   @Schema(name = "data", example = "5.03.2025", requiredMode = Schema.RequiredMode.REQUIRED)
+   @Schema(name = "data", example = "05.03.2025", requiredMode = Schema.RequiredMode.REQUIRED)
    private String data;
    @Schema(name = "answer", example = "true", requiredMode = Schema.RequiredMode.REQUIRED)
    private boolean answer;

@@ -13,7 +13,7 @@ public class OpenApiConfig {
     public OpenAPI openAPI() {
         return new OpenAPI()
                 .info(new Info().title("Data Documentation"))
-                .addServersItem(new Server().url("/api").description("Data Documentation"));
+                .addServersItem(new Server().description("Data Documentation"));
 
     }
 }

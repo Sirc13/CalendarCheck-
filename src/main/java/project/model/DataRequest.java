@@ -12,7 +12,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class DataRequest {
-    @Schema(name = "data", example = "5.03.2025", requiredMode = Schema.RequiredMode.REQUIRED)
+    @Schema(name = "data", example = "05.03.2025", requiredMode = Schema.RequiredMode.REQUIRED)
     @JsonProperty("data")
     private String data;
 }

@@ -2,18 +2,14 @@ package project.controller;
 
 
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 
-import org.springframework.web.bind.annotation.GetMapping;
-
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import project.ApiError;
 import project.model.DataRequest;
@@ -24,7 +20,7 @@ import project.service.DataService;
 
 
 @RestController
-@RequestMapping("/api/data")
+@RequestMapping("/data")
 @RequiredArgsConstructor
 @Tag(name = "Data Controller", description = "Controller about data")
 public class DataController {
@@ -47,8 +43,8 @@ public class DataController {
                     )
             }
     )
-    @GetMapping("/work")
-    public DataResponse getSuccessWorkedDay(@RequestBody DataRequest dataRequest) {
+    @PostMapping("/work")
+    public DataResponse getSuccessWorkedDay(@Parameter(name = "DataRequest") @RequestBody DataRequest dataRequest) {
         return dataService.getSuccessWorkedDay(dataRequest);
     }
 }
