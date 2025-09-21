@@ -18,12 +18,14 @@ public class DataCheck {
     public void DataIncorrect(DataRequest request) {
         Data data = new Data();
         char[] chars = request.getData().toCharArray();
-        if (chars.length < 8 || chars.length > 10) {
+        String dataString = new String(chars);
+        String charsString = dataString.replaceAll("[^0-9]", "");
+        if (charsString.length() < 8 || charsString.length() > 10) {
             data.setData(request.getData());
             dataRepository.save(data);
             throw new FilledInIncorrectly("Incorrect data");
         }
-        for (int i = 0; i < chars.length; i++) {
+        for (int i = 0; i < charsString.length(); i++) {
             if (chars[i] == '-') {
                 throw new FilledInIncorrectly("Incorrect data");
             }

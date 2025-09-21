@@ -9,5 +9,4 @@ import lombok.Setter;
 public class ApiError {
 
     private String message;
-    private int code;
 }
