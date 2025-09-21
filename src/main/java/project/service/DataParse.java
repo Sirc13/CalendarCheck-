@@ -5,9 +5,9 @@ import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import project.model.DataRequest;
 
-@RequiredArgsConstructor
 @Getter
 @Setter
+@RequiredArgsConstructor
 public class DataParse {
     public int getDay(DataCheck dataCheck, DataRequest dataRequest) {
         dataCheck.DataIncorrect(dataRequest);
@@ -15,12 +15,14 @@ public class DataParse {
         int day = Integer.parseInt(stringDay);
         return day;
     }
+
     public int getMouth(DataCheck dataCheck, DataRequest dataRequest) {
         dataCheck.DataIncorrect(dataRequest);
         String stringMonth = dataRequest.getData().substring(3, 5);
         int month = Integer.parseInt(stringMonth);
         return month;
     }
+
     public int getYear(DataCheck dataCheck, DataRequest dataRequest) {
         dataCheck.DataIncorrect(dataRequest);
         String stringYear = dataRequest.getData().substring(6, 10);

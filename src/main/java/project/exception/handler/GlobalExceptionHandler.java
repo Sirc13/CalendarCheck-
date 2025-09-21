@@ -14,7 +14,6 @@ import project.exception.FilledInIncorrectly;
 import java.rmi.ServerError;
 
 @ControllerAdvice
-
 public class GlobalExceptionHandler {
 
     @ExceptionHandler(BadRequest.class)

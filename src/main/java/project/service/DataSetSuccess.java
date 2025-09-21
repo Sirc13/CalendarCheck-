@@ -9,9 +9,9 @@ import project.model.Time;
 import java.time.DayOfWeek;
 import java.time.LocalDate;
 
-@RequiredArgsConstructor
 @Getter
 @Setter
+@RequiredArgsConstructor
 public class DataSetSuccess {
     public boolean getDataResponse(Time time) {
         DataResponse dataResponse = new DataResponse();
@@ -20,9 +20,9 @@ public class DataSetSuccess {
         int year = time.getYear();
         LocalDate date = LocalDate.of(year, month, day);
         DayOfWeek dayOfWeek = date.getDayOfWeek();
-        if(dayOfWeek == DayOfWeek.SATURDAY || dayOfWeek == DayOfWeek.SUNDAY){
+        if (dayOfWeek == DayOfWeek.SATURDAY || dayOfWeek == DayOfWeek.SUNDAY) {
             dataResponse.setSuccess(false);
-        }else{
+        } else {
             dataResponse.setSuccess(true);
         }
         return dataResponse.isSuccess();

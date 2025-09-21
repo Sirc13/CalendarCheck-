@@ -9,8 +9,8 @@ import lombok.Setter;
 
 @Getter
 @Setter
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 public class DataResponse {
     @Schema(name = "answer", example = "true", requiredMode = Schema.RequiredMode.REQUIRED)
     private boolean success;
