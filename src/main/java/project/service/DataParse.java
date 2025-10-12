@@ -1,5 +1,4 @@
 package project.service;
-//hoy
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
@@ -9,7 +8,7 @@ import project.model.DataRequest;
 @Setter
 @RequiredArgsConstructor
 public class DataParse {
-    public int getDay(DataCheck dataCheck, DataRequest dataRequest) {
+    public static int getDay(DataCheck dataCheck, DataRequest dataRequest) {
         dataCheck.DataIncorrect(dataRequest);
         String stringDay = dataRequest.getData().substring(0, 2);
         int day = Integer.parseInt(stringDay);

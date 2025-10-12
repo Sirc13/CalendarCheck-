@@ -13,7 +13,7 @@ import java.time.LocalDate;
 @Setter
 @RequiredArgsConstructor
 public class DataSetSuccess {
-    public boolean getDataResponse(Time time) {
+    public static boolean getDataResponse(Time time) {
         DataResponse dataResponse = new DataResponse();
         int day = time.getDay();
         int month = time.getMouth();
